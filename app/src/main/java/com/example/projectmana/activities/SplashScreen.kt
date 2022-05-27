@@ -1,4 +1,4 @@
-package com.example.projectmana
+package com.example.projectmana.activities
 
 import android.content.Intent
 import android.graphics.Typeface
@@ -8,6 +8,7 @@ import android.os.Handler
 import android.util.Log
 import android.view.WindowManager
 import android.widget.TextView
+import com.example.projectmana.R
 
 class SplashScreen : AppCompatActivity() {
 

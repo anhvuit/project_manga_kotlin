@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@drawable/background"
-    tools:context=".SplashScreen">
+    tools:context=".activities.SplashScreen">
 
     <TextView
         android:id="@+id/tv_app_name"

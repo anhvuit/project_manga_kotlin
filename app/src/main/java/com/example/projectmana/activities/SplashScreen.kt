@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.WindowManager
 import android.widget.TextView
 import com.example.projectmana.R
+import com.example.projectmana.firebase.FirestoreClass
 
 class SplashScreen : AppCompatActivity() {
 
@@ -27,7 +28,14 @@ class SplashScreen : AppCompatActivity() {
 
     private fun navigateIntroScreen (){
         Handler().postDelayed({
-            startActivity(Intent(this, IntroActivity::class.java))
+
+            val currentUserID = FirestoreClass().getCurrentUserID()
+            if( currentUserID.isNotEmpty()){
+                startActivity(Intent(this, MainActivity::class.java))
+            }else{
+                startActivity(Intent(this, IntroActivity::class.java))
+            }
+
             finish()
         }, 2500)
     }
@@ -40,6 +48,9 @@ class SplashScreen : AppCompatActivity() {
 
         setFlag()
         setTypeFace()
+
+
+
         navigateIntroScreen()
 
     }

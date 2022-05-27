@@ -18,5 +18,7 @@
 
     <string name="sign_in_description_text">Enter your name, email id and password, to login with us.</string>
 
+    <string name="nav_my_profile">My Profile</string>
+    <string name="nav_sign_out">Sign Out</string>
 
 </resources>

@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.projectmana.R
+import com.example.projectmana.models.User
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -108,5 +109,14 @@ class SignInActivity : BaseActivity() {
             true
         }
     }
+
+    fun signInSuccess(user: User) {
+
+        hideProgressDialog()
+
+        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+        finish()
+    }
+
     // END
 }

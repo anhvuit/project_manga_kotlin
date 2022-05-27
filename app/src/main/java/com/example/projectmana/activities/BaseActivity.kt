@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import com.example.projectmana.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.dialog_progress.*
 
 
 open class BaseActivity : AppCompatActivity() {
@@ -37,7 +38,8 @@ open class BaseActivity : AppCompatActivity() {
         The resource will be inflated, adding all top-level views to the screen.*/
         mProgressDialog.setContentView(R.layout.dialog_progress)
 //        val titleName: TextView = findViewById(R.id.tv_progress_text);
-//        mProgressDialog.tv_progress_text = text
+
+        mProgressDialog.tv_progress_text.setText(text)
 
         //Start the dialog and display it on screen.
         mProgressDialog.show()

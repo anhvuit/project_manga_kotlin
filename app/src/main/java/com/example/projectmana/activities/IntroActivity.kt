@@ -22,5 +22,8 @@ class IntroActivity : AppCompatActivity() {
 
         val btnSignUp: Button = findViewById(R.id.btn_sign_up_intro);
         btnSignUp.setOnClickListener { startActivity(Intent(this, SignUpActivity::class.java)) }
+
+        val btnSignIn: Button = findViewById(R.id.btn_sign_in_intro);
+        btnSignIn.setOnClickListener { startActivity(Intent(this, SignInActivity::class.java)) }
     }
 }
